@@ -25,7 +25,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # تثبيت حزم الملحقات الخاصة بـ Laravel
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
+RUN composer install --optimize-autoloader --no-interaction --no-scripts
 
 # نسخ ملفات إعدادات الخادم والتشغيل
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
