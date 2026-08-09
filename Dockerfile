@@ -1,6 +1,6 @@
 FROM php:8.2-fpm-alpine
 
-# تثبيت متطلبات النظام
+# System dependencies
 RUN apk add --no-cache \
     nginx \
     supervisor \
@@ -17,7 +17,7 @@ RUN apk add --no-cache \
     nodejs \
     npm
 
-# تثبيت إضافات PHP
+# PHP extensions
 RUN docker-php-ext-configure gd \
         --with-freetype \
         --with-jpeg \
@@ -44,30 +44,30 @@ RUN composer install \
     --no-interaction \
     --no-scripts
 
-# نسخ المشروع
+# Application
 COPY . .
 
-# Node dependencies
+# Frontend dependencies and Vite build
 RUN npm ci
-
-# بناء Vite
 RUN npm run build
 
-# تأكد أن Vite أنشأ manifest.json
+# Make sure Vite manifest exists
 RUN test -f /var/www/html/public/build/manifest.json
 
-# إعداد Nginx و Supervisor
+# Nginx
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 
+# Supervisor
 COPY ./docker/supervisord.conf \
     /etc/supervisor/conf.d/supervisord.conf
 
-# الصلاحيات
+# Permissions
 RUN chown -R www-data:www-data \
     /var/www/html/storage \
     /var/www/html/bootstrap/cache
 
 EXPOSE 80
 
-CMD php artisan migrate:fresh --seed --force && \
+# Start application
+CMD php artisan migrate --force && \
     /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
