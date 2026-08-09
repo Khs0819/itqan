@@ -1,0 +1,40 @@
+# مهام إعادة تصميم ثيم إتقان
+
+- `[x]` تحديث CSS Design System (app.css)
+  - `[x]` تعزيز Hero overlay و text shadows
+  - `[x]` تحسين بطاقات الإحصائيات (glass cards)
+  - `[x]` تعزيز CTA section و بطاقاتها
+  - `[x]` تحسين Footer و Newsletter
+  - `[x]` إضافة keyframes إبداعية جديدة
+  - `[x]` إضافة decorative patterns و utility classes
+  - `[x]` إضافة section/section-white/section-light classes
+  - `[x]` إضافة section-head/section-subtitle/section-title/section-desc
+  - `[x]` إضافة about-feature component styles
+  - `[x]` إضافة prose typography for content pages
+- `[x]` تحديث Home page template (home.blade.php)
+  - `[x]` تحسين Hero section (overlay + عناصر زخرفية)
+  - `[x]` تحسين بطاقات الإحصائيات
+  - `[x]` تحسين CTA / المنح section
+  - `[x]` تحسين Newsletter section
+- `[x]` تحديث Layout template (app.blade.php)
+  - `[x]` تحسين Footer styling
+  - `[x]` تحسين gradient line
+- `[x]` إنشاء مكون page-header مع تباين مثالي
+- `[x]` إنشاء الصفحات الداخلية:
+  - `[x]` عن الجمعية (about.blade.php)
+  - `[x]` تواصل معنا (contact.blade.php)
+  - `[x]` البرامج - القائمة (programs/index.blade.php)
+  - `[x]` البرامج - التفاصيل (programs/show.blade.php)
+  - `[x]` الأخبار - القائمة (news/index.blade.php)
+  - `[x]` الأخبار - التفاصيل (news/show.blade.php)
+  - `[x]` المنح الدراسية (grants.blade.php)
+  - `[x]` التطوع (volunteer.blade.php)
+  - `[x]` الوظائف (careers.blade.php)
+  - `[x]` الحوكمة (governance.blade.php)
+  - `[x]` المعرض (gallery.blade.php)
+  - `[x]` الخدمات (services.blade.php)
+  - `[x]` الأسئلة الشائعة (faq.blade.php)
+  - `[x]` سياسة الخصوصية (privacy.blade.php)
+  - `[x]` الشروط والأحكام (terms.blade.php)
+- `[/]` بناء ملفات CSS/JS (vite build)
+- `[ ]` التحقق من النتائج عبر المتصفح
